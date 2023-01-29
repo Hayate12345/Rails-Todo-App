@@ -1,5 +1,7 @@
 <% @todos.each do |todo| %>
-  <p><%= todo.title %></p>
-  <p><%= todo.contents %></p>
-  <%= button_to "タスク削除", "/delete/#{todo.id}", class: "btn btn-danger px-5", method: :delete %>
+  <div class="mb-2 px-3 py-3 bg-light col-lg-8">
+    <p class="fw-bold">タスクタイトル：<%= todo.title %></p>
+    <p>タスク内容：<%= todo.contents %></p>
+    <%= button_to "タスク削除", "/delete/#{todo.id}", class: "btn btn-danger px-3", method: :delete %>
+  </div>
 <% end %>
